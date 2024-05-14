@@ -11,6 +11,9 @@ RUN autoreconf . -i && \
 
 ENV CPPUTEST_HOME=/opt/cpputest
 
+# Disable Memory Leak Detection
+# ENV CPPUTEST_USE_MEM_LEAK_DETECTION=N 
+
 # Install leagcy-build
 WORKDIR /opt/legacy-build
 RUN git clone --depth 1 https://github.com/jwgrenning/legacy-build.git .
